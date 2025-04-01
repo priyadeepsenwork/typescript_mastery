@@ -38,3 +38,11 @@ let headline = `Trump was elected as the 48th president of the United States.`
 
 console.log(news(headline))
 
+
+const square = (num: number) : number => {
+    return num*num
+}
+
+let num = 9
+console.log(`The square of ${num} is : ${square(num)}`)
+

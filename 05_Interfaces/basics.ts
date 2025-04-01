@@ -74,7 +74,7 @@ interface Person {
 }
 
 const greets = (person: Person) => {
-    console.log(`Hello, ${person.firstName} ${person.lastName}`)
+    //console.log(`Hello, ${person.firstName} ${person.lastName}`)
     person.sayHello() //calling the function
 }
 
@@ -84,7 +84,7 @@ const mySelf: Person = {
     age: 21,
     //the function definition in the object
     sayHello() {
-        console.log('Hi there!')
+        //console.log('Hi there!')
     },
     phone: 8888899999 //not my number hehe, idk whose it is....
 }
@@ -94,11 +94,27 @@ const mySelf2: Person = {
     lastName: 'Sengupta',
     age: 22,
     sayHello() {
-        console.log('Wats good?')
+        //console.log('Wats good?')
     },
     phone: 8888899999 //not my number hehe, idk whose it is....
 }
 
 greets(mySelf)
 greets(mySelf2)
+
+interface Song {
+    songName: string;
+    artist: string;
+    printSongInfo(songName: string, singerName: string): string;
+}
+
+const song1: Song = {
+    songName: "Answer",
+    artist: "Bump of Chicken",
+    printSongInfo: (songName, artist) => {
+        return `Song: ${songName} - ${artist}`
+    }
+}
+
+//console.log(song1.printSongInfo("Answer", "Bump of Chicken"))
 
